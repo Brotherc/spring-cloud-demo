@@ -2,12 +2,16 @@ server:
   port: 8080
 spring:
   application:
-    name: consumer
+    name: ribbon
 
 eureka:
   client:
     service-url:
       defaultZone: http://127.0.0.1:8666/eureka/
+
+provider:
+  ribbon:
+    listOfServer: 127.0.0.1:8083
 
 logbook:
   write:
