@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cors</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+<div id="result"></div>
+</body>
+<script>
+    $(function(){
+        $.ajax({
+            url: "http://cors:8080/testCors/2",
+            type: "GET",
+            dataType: "text"
+        }).done(function(data){
+            $('#result').html(data);
+        });
+    });
+</script>
+</html>
